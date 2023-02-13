@@ -12,5 +12,3 @@ outputs:
 runs:
   using: 'docker'
   image: 'docker://yavital/docker-action:latest'
-  args:
-    - ${{ inputs.who-to-greet }}
