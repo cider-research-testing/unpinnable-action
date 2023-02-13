@@ -2,8 +2,9 @@
 
 FROM python:3.8-slim-buster
 
-ADD run.sh .
+COPY run.sh /run.sh
 
-RUN chmod +x run.sh
+RUN chmod +x /run.sh
 
-RUN ./run.sh
+# Code file to execute when the docker container starts up (`run.sh`)
+ENTRYPOINT ["/run.sh"]
